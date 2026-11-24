@@ -3,7 +3,7 @@ let s = document.createElement("script");
 s.type = "text/javascript";
 s.src = chrome.runtime.getURL("inject.js");
 s.onload = function () {
-  this.parentNode.removeChild(this);
+  this.remove();
 };
 (document.head || document.documentElement).appendChild(s);
 
